@@ -31,6 +31,7 @@ public class basicCalculator {
         } else {
             System.out.println("No Operation Input");
         }
+        //something
 
         // rewrite to switch
 
