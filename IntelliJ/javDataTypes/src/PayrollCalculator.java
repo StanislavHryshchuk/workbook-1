@@ -20,8 +20,8 @@ public class PayrollCalculator {
         if (hoursOfWork > 40) {
 
             float overTimeHours = hoursOfWork - 40;
-            float standart_Rate_HoursOfWork = hoursOfWork - overTimeHours;
             float overTimePayRate = (float) (payRate * 1.5);
+            float standart_Rate_HoursOfWork = hoursOfWork - overTimeHours;
 
             System.out.println("You worked overtime: " + overTimeHours + " hours\n");
             System.out.println("For that amount of time, your new pay rate is: "+ overTimePayRate + "$\n");
@@ -35,8 +35,8 @@ public class PayrollCalculator {
             if (totalForWeek > 1000){
                 System.out.println("You're are great worker!!! Thanks for your Job!!");
             }
-        }
-        else {
+
+        } else {
             float grossPay = hoursOfWork * payRate;
             System.out.println("Calculating a weekly salary...\nGross pay for the week: " + grossPay + "$");
         }
