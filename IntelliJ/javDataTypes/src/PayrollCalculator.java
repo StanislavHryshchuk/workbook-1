@@ -35,7 +35,6 @@ public class PayrollCalculator {
             if (totalForWeek > 1000){
                 System.out.println("You're are great worker!!! Thanks for your Job!!");
             }
-
         } else {
             float grossPay = hoursOfWork * payRate;
             System.out.println("Calculating a weekly salary...\nGross pay for the week: " + grossPay + "$");
