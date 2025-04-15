@@ -1,3 +1,5 @@
+package week_1;
+
 import java.util.Scanner;
 
 public class Potions {
@@ -14,7 +16,7 @@ public class Potions {
         System.out.println("Your total Score is: " + totalPoints);
 
         int potionCost = 15;
-        System.out.println("Do you need a Potions?");
+        System.out.println("Do you need a week_1.Potions?");
         String potions = userInput.nextLine();
 
         switch (potions) {

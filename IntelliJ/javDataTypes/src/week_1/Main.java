@@ -1,3 +1,5 @@
+package week_1;
+
 public class Main {
     public static void main(String[] args) {
         //a vehicle identification number in the range 1000000 - 9999999

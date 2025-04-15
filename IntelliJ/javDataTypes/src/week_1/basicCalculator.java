@@ -1,4 +1,5 @@
-import java.util.Objects;
+package week_1;
+
 import java.util.Scanner;
 
 public class basicCalculator {

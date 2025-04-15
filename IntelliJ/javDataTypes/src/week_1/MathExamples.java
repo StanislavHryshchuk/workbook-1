@@ -1,3 +1,5 @@
+package week_1;
+
 public class MathExamples {
     public static void main(String[] args) {
         // 1
