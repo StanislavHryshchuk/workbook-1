@@ -1,4 +1,4 @@
-package week_2;
+package week_2.Methods;
 
 import java.util.Scanner;
 
@@ -29,6 +29,8 @@ public class MethodMiniEx_2 {
         getplayerClass();
         //8
         System.out.println(addGold(100));
+        //9
+        System.out.println(isQuestComplete(4,4));
 
 
     }
@@ -44,6 +46,7 @@ public class MethodMiniEx_2 {
     //2
     public static int doubleXp(int xp) {
         return xp * 2;
+
     }
 
     //3
@@ -111,9 +114,16 @@ public class MethodMiniEx_2 {
         if (goldFound > 100) {
             goldFound -= goldFound * 0.1;
         }
-        double totalGold = currentGold + goldFound;
-        return totalGold;
+         return currentGold + goldFound;
 
+
+    }
+    //9
+    public static boolean isQuestComplete(int tasksDone, int totalTasks){
+        if (tasksDone != totalTasks) {
+            System.out.println("You still have work to do! Go work, stop chilling!");
+        }
+        return true;
     }
 }
 

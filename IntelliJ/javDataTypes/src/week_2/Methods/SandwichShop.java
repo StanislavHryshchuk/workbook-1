@@ -1,4 +1,4 @@
-package week_2;
+package week_2.Methods;
 
 import java.util.Scanner;
 
@@ -27,6 +27,7 @@ public class SandwichShop {
         }
 
     }
+
     public static double
     getDiscountByAge(){
         System.out.println("How old are you?");
