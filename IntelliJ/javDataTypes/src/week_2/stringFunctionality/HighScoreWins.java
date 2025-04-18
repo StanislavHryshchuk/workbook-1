@@ -11,6 +11,7 @@ public class HighScoreWins {
         String userInput = scanner.nextLine().trim();
 
         //String[] teams = userInput.substring(0,userInput.indexOf("|")).split(Pattern.quote(":"));
+        // (team1 : team2 | 59 : 65
         String[] teams = userInput.split("\\|")[0].split(":");
 
         //String[] score = userInput.substring(userInput.indexOf("|")).split(Pattern.quote(":"));

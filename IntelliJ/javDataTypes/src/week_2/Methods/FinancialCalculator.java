@@ -1,4 +1,4 @@
-package week_2.stringFunctionality;
+package week_2.Methods;
 
 import java.util.Scanner;
 
@@ -158,7 +158,6 @@ public class FinancialCalculator {
     public static double presentValueCalculatorFormulaMetod(double payment, double interest,int numberOfPayments){
         return payment * (((1 - Math.pow(1 + interest,-numberOfPayments)) / interest));
     }
-
 }
 
 
