@@ -36,4 +36,7 @@ public class Book {
         this.author = author;
 
     }
+    public String toFile (){
+        return this.title + "|" + this.author + "\n";
+    }
 }

@@ -28,7 +28,9 @@ public class Book {
         this.pages = pages;
     }
 
-    public Book(){}
+    public Book(){
+
+    }
 
     public Book(String author, String title, int pages){
         this.author = author;
