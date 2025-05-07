@@ -5,11 +5,15 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DailyMoodLoggerApp {
     static Scanner scanner = new Scanner(System.in);
-
+    static DateTimeFormatter formatter;
 
     public static void main(String[] args) {
        userMenu();
@@ -36,9 +40,16 @@ public class DailyMoodLoggerApp {
     }
     public static void logNewMood (){
         try (FileWriter fr = new FileWriter("IntelliJ/javDataTypes/src/week_3/DailyMoodLogger/MoodLog.csv",true)){
+            formatter = DateTimeFormatter.ofPattern("dd/MMM/yy KK:mma");
+
             LocalDate ld = LocalDate.now();
-            fr.write(String.valueOf(ld) + ": ");
-            fr.write(scanner.nextLine()+ "\n");
+            LocalTime lt = LocalTime.now();
+            LocalDateTime ldt = ld.atTime(lt);
+
+            String stringLdt = ldt.format(formatter);
+
+            fr.write("\n" + stringLdt + " - ");
+            fr.write( scanner.nextLine()+ "\n");
         }catch (IOException e){
             System.out.println(e.getMessage());
         }
@@ -47,8 +58,14 @@ public class DailyMoodLoggerApp {
     public static void viewPastMods(){
         try (BufferedReader br = new BufferedReader(new FileReader("IntelliJ/javDataTypes/src/week_3/DailyMoodLogger/MoodLog.csv"))){
             String line;
+
             while ((line = br.readLine())!= null){
-                System.out.println(line);
+//                System.out.println(line);
+                String[] split = line.split("(?<=\\. )");
+                for(String lines: split){
+                    System.out.println(lines);
+                }
+
             }
         }catch (IOException e){
             System.out.println(e.getMessage());

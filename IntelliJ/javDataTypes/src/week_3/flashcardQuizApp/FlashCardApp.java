@@ -9,7 +9,7 @@ public class FlashCardApp {
 
     public static void main(String[] args) {
         System.out.println("\n----------------Welcome to Flashcard Quiz Game-----------------\n");
-        System.out.println("How many round you want to play? (max 5)");
+        System.out.println("How many rounds you want to play? (max 5)");
         int userChoiceRound = scanner.nextInt();
         scanner.nextLine();
         int loopCount = 0;
@@ -19,9 +19,11 @@ public class FlashCardApp {
         List<String> userAnswers = new ArrayList<>();
         while(loopCount != userChoiceRound){
 
+            System.out.println("Round: " + (loopCount + 1));
+
             Flashcard flashcard = singleFlashCard();
 
-            System.out.println(flashcard.getQuestion());
+            System.out.println("Question: " + (loopCount + 1) +"\n"+ flashcard.getQuestion());
             totalQuestionsCount++;
             userAnswers.add(scanner.nextLine());
 

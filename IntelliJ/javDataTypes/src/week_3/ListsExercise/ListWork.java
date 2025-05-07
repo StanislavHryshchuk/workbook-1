@@ -16,6 +16,7 @@ public class ListWork {
         animals.remove(1);
         System.out.println(animals.indexOf("Octopus"));
         animals.forEach(System.out::println);
+
         for (String animal:animals){
             System.out.println(animal);
         }
